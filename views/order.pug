@@ -1,0 +1,56 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1')
+  meta(name='description', content='')
+  meta(name='author', content='')
+  title Order
+  link(href='bootstrap.min.css', rel='stylesheet')
+  link(rel='stylesheet', type='text/css', href='main.css')
+  link(href='css/orderform.css', rel='stylesheet')
+// nav bar
+nav.navbar.navbar-expand-lg.fixed-top.navbgcolor
+  .container-fluid
+    a.navbar-brand.white(href='#')
+      h4  UFARM
+    button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarSupportedContent.collapse.navbar-collapse
+      ul.navbar-nav.me-auto.mb-2.mb-lg-0
+        li.nav-item.dropdown
+          a.nav-link.dropdown-toggle(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false', style='color:white;')
+            | Market
+          ul.dropdown-menu
+            li
+              a.dropdown-item(href='#') Pricing
+            li
+              a.dropdown-item(href='#') Make booking
+            li
+              hr.dropdown-divider
+            li
+              a.dropdown-item(href='#') Something else here
+        li
+          a.nav-link.white(aria-current='page', href='#') Home
+        li
+          a.nav-link.white(href='#') About Us
+      form.d-flex
+        .container-fluid
+          a.navbar-brand.white(href='#')
+            a.btn.btn-success(href='#') Login
+          button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+            span.navbar-toggler-icon
+          #navbarSupportedContent.collapse.navbar-collapse
+.padding-top
+  .container
+    .row
+      .col-lg-6.col-12
+        img.img-fluid.order-image(src='image/4.jpg', alt='')
+      .col-lg-6.col-12.d-flex.align-items-center.mt-5.mt-lg-0.mx-auto
+        .subscribe-form-wrap
+          h4.mb-0 Product Name
+          p Stay home we deliver
+          form.custom-form.subscribe-form.mt-4
+            input#email.form-control(type='email', name='email', placeholder='Your email address')
+            input#address.form-control(type='text', name='address', placeholder='Your physical address')
+            button.form-control.mb-3(type='submit', id='') Order
+            small By ordering you agree to our delivery terms and conditions

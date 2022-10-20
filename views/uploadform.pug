@@ -1,0 +1,62 @@
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  title Urban Farmer Upload form
+  link(rel='stylesheet', type='text/css', href='css/style.css')
+.container
+  #form-wrapper
+    form#upload-form(action='/uploadproduce' enctype='multipart/form-data' method='post')
+      .container2
+      .padding
+        input#datetoday.form-control-2(type='date', name='datetoday', placeholder='date')
+      .padding
+        input#foid.form-control-2(type='text', name='foid', placeholder='FO Id')
+      .container2
+        .padding
+          select#ward(name='ward')
+            option(value='select your Ward') Select Ward
+            |                 &gt;
+            option(value='WardA') Ward A
+            option(value='wardB') ward B
+            option(value='wardC') ward C
+            option(value='wardD') ward D
+        .padding
+          select#quantity(name='quantity')
+            option(value='select your quantity') Select Quantity
+            |                 &gt;
+            option(value='1') One
+            option(value='2') Two
+            option(value='3') Three
+            option(value='4') Four
+            option(value='5') Five
+            option(value='largestock') Large Stock
+        .padding
+          select#modeofpayment(name='modeofpayment')
+            option(value='select mode of payment')
+              | Select Mode of Payment
+            |                 &gt;
+            option(value='cash') Cash
+            option(value='mobilemoney') Mobile Money
+        .padding
+          select#modeofdelivery(name='modeofdelivery')
+            option(value='select mode of delivery')
+              | Select Mode of Payment
+            |                 &gt;
+            option(value='pickup') pickup
+            option(value='home delivery') Home delivery
+      .container3
+        .padding
+          input#producename.form-control-2(type='text', name='producename', placeholder='Produce name')
+        .padding
+          input#unitprice.form-control-2(type='text', name='unitprice', placeholder='Unit Price')
+        .padding
+          input#produceimage.form-control-2(type='file', name='produceimage', placeholder='Produce Image')
+      div
+        input#address.form-control-2.form-float(type='text', name='address', placeholder='Adress')
+      p.null-field
+      .padding
+      button#submit.width3(type='submit') Upload
+  p.copyright
+    | &copy; Massajja Ubarn farmer initiative. All rights reserved!
+  script(src='/validate.js')

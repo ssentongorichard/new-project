@@ -1,0 +1,46 @@
+extends layout
+block content
+    header.card-header
+        h4.card-title List of Farmer ones
+    br
+    nav
+    #nav-tab.nav.nav-tabs(role='tablist')
+        a#nav-profile-tab.nav-item.nav-link(href='/registerFarmerOne') Register FarmerOne
+    #nav-tabContent.tab-content
+    br
+    table.table.table-bordered 
+        thead
+            tr
+                th Produce Name
+                th Quantity
+                th Price
+                th Mode of Delivery
+                th Mode of Payment
+                th Image 
+                th Update
+                th Delete
+        tbody
+            if products.length
+                each product in products
+                    tr
+                        td #{product.producename}
+                        td #{product.quantity}
+                        td #{product.price}
+                        td #{product.modeofdelivery}
+                        td #{product.modeofpayment}
+                        td 
+                            img(src="/"+product.uploadimage, alt="Image" width='150px' height="150px")
+                        //- td #{moment(us
+                        td
+                            a
+                                button.btn.btn-primary.btn-block(href='/produce/update/'+product._id) Update
+                        td
+                            form(method="post" action='/farmerOne/delete')
+                                input(type="hidden" placeholder="" name="id", value=product._id)
+                                button.btn.btn-danger.btn-block(type="submit") Delete
+    div.form-row
+        div.col.form-group
+            a(class='button' href='/agricOfficerDash') Back
+
+block footer
+    div.col-md-12 ©️ 2022 Refactory Cohort 12, NodeJS by Irene.

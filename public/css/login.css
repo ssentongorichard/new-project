@@ -1,0 +1,31 @@
+
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.bg03 {
+	background-image: url(image/2.jpg);
+}
+.tm-mt-big {
+  margin-top: 70px;
+}
+.tm-block {
+  padding: 50px 45px;
+}
+.tm-login-col {
+  max-width: 600px;
+}
+.tm-block {
+    padding: 30px;
+  }
+  .tm-site-icon {
+    font-size: 2em;
+  }
+  
+ .padding{
+  padding-top: 50px;
+ }
